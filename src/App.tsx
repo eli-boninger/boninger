@@ -6,18 +6,17 @@ import { motion } from "framer-motion";
 import { Outlet } from "react-router-dom";
 
 const appBox = css({
-  backgroundColor: "#393E41",
   height: "100vh",
   width: "100%",
 });
 
 const appContainer = css({
-  padding: "8px",
+  padding: "0.5rem",
 });
 
 export const App = () => {
   return (
-    <Box css={appBox}>
+    <Box css={appBox} bgcolor={"primary.main"}>
       <Container maxWidth="lg" css={appContainer}>
         <motion.div
           animate={{ opacity: 1, marginTop: 8 }}

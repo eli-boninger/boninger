@@ -5,8 +5,8 @@ import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./theme";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Error } from "./pages/Error";
-import { Home } from "./pages/Home";
 import { Music } from "./pages/Music";
+import { Work } from "./pages/Work";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: "/music",
         element: <Music />,
+      },
+      {
+        path: "/work",
+        element: <Work />,
       },
     ],
   },
