@@ -5,7 +5,8 @@ import { Box, Container } from "@mui/material";
 import { Outlet } from "react-router-dom";
 
 const appBox = css({
-  height: "100vh",
+  height: "100%",
+  minHeight: "100vh",
   width: "100%",
 });
 

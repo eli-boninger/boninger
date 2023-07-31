@@ -13,7 +13,7 @@ export const theme = createTheme({
       main: "#CDD5D1",
     },
     info: {
-      main: "#7880B5",
+      main: "#EB9486",
     },
   },
 });

@@ -14,7 +14,13 @@ export const Header = () => {
   const isRootPath = pathname === "/";
 
   return (
-    <Slide appear={false} in={isRootPath} unmountOnExit timeout={1000}>
+    <Slide
+      appear={false}
+      in={isRootPath}
+      enter={false}
+      unmountOnExit
+      timeout={1000}
+    >
       <div
         css={{
           display: "flex",
@@ -32,7 +38,7 @@ export const Header = () => {
             color="secondary"
             aria-label="Navigation options button group"
           >
-            <Button onClick={() => navigate("/work")}>Work</Button>
+            <Button onClick={() => navigate("/work")}>Bio</Button>
             <Button onClick={() => navigate("/music")}>Music</Button>
             <Button>Miscellaneous</Button>
           </ButtonGroup>
