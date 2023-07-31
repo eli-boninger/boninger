@@ -1,4 +1,9 @@
-import { Typography } from "@mui/material";
+import { Fade, Typography } from "@mui/material";
 import React from "react";
+import { BasePage } from "./BasePage";
 
-export const Work = () => <Typography>Work</Typography>;
+export const Work = () => (
+  <BasePage title="Work">
+    <Typography color="secondary.light">Page content</Typography>
+  </BasePage>
+);
