@@ -32,7 +32,7 @@ export const Header = () => {
         <Typography css={titleStyle} color="secondary">
           Eli Boninger is a web developer and musician living in Boston.
         </Typography>
-        <Fade in timeout={5000}>
+        <Fade in timeout={3000}>
           <ButtonGroup
             variant="text"
             color="secondary"
@@ -40,7 +40,6 @@ export const Header = () => {
           >
             <Button onClick={() => navigate("/work")}>Bio</Button>
             <Button onClick={() => navigate("/music")}>Music</Button>
-            <Button>Miscellaneous</Button>
           </ButtonGroup>
         </Fade>
       </div>
