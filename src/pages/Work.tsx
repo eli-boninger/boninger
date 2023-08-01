@@ -11,13 +11,13 @@ import { BasePage } from "./BasePage";
 export const Work = () => (
   <BasePage title="About me">
     <div style={{ maxWidth: "50rem" }}>
-      <Typography color="secondary.light">
+      <Typography component="div" color="secondary.light">
         After double-majoring in Computer Science and Music at the Tufts
         University School of Engineering (class of 2017), I joined the tech
         industry as a full stack software engineer.
       </Typography>
       <br />
-      <Typography color="secondary.light">
+      <Typography component="div" color="secondary.light">
         My first role was with Slalom Build as a developer part of several
         different "scrum teams for hire". During my two years with Slalom Build
         I worked on five different teams, each serving a different and unique

@@ -1,8 +1,10 @@
 import React from "react";
 import { Header } from "./components/Header";
 import { css } from "@emotion/react";
-import { Box, Container } from "@mui/material";
-import { Outlet } from "react-router-dom";
+import { Box, Container, useMediaQuery } from "@mui/material";
+import { Outlet, useLocation } from "react-router-dom";
+import { theme } from "./theme";
+import { Nav } from "./components/Nav";
 
 const appBox = css({
   height: "100%",
@@ -18,6 +20,7 @@ export const App = () => {
   return (
     <Box css={appBox} bgcolor={"primary.main"}>
       <Container maxWidth="lg" css={appContainer}>
+        <Nav />
         <Header />
         <Outlet />
       </Container>
