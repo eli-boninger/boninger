@@ -2,16 +2,18 @@ import React from "react";
 import { css } from "@emotion/react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IconButton, Menu, MenuItem } from "@mui/material";
-import { Link } from "./Links";
-import { useNavigate } from "react-router-dom";
+import { Route } from "./Routes";
+import { useLocation, useNavigate } from "react-router-dom";
+import { ReturnButton } from "./ReturnButton";
 
 interface Props {
-  links: Link[];
+  links: Route[];
 }
 
 export const HamburgerMenu = (props: Props) => {
   const { links } = props;
   const navigate = useNavigate();
+  const { pathname } = useLocation();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -26,7 +28,8 @@ export const HamburgerMenu = (props: Props) => {
   };
 
   return (
-    <div css={{ display: "flex", justifyContent: "end" }}>
+    <div css={{ display: "flex", justifyContent: "space-between" }}>
+      <ReturnButton />
       <IconButton
         id="nav-button"
         aria-controls={open ? "nav-menu" : undefined}
@@ -51,7 +54,11 @@ export const HamburgerMenu = (props: Props) => {
         `}
       >
         {links.map((link) => (
-          <MenuItem key={link.text} onClick={() => handleCLick(link.route)}>
+          <MenuItem
+            key={link.text}
+            onClick={() => handleCLick(link.path)}
+            selected={pathname === link.path}
+          >
             {link.text}
           </MenuItem>
         ))}

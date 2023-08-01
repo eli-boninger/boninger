@@ -6,23 +6,21 @@ import { theme } from "./theme";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Error } from "./pages/Error";
 import { Music } from "./pages/Music";
-import { Work } from "./pages/Work";
+import { Bio } from "./pages/Bio";
+import { Routes } from "./components/Routes";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <Error />,
-    children: [
-      {
-        path: "/music",
-        element: <Music />,
-      },
-      {
-        path: "/work",
-        element: <Work />,
-      },
-    ],
+    children: Routes.map((link) => {
+      const { path, element } = link;
+      return {
+        path,
+        element,
+      };
+    }),
   },
 ]);
 

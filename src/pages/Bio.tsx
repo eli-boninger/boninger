@@ -8,7 +8,7 @@ import {
 import React from "react";
 import { BasePage } from "./BasePage";
 
-export const Work = () => (
+export const Bio = () => (
   <BasePage title="About me">
     <div style={{ maxWidth: "50rem" }}>
       <Typography component="div" color="secondary.light">

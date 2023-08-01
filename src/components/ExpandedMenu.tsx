@@ -1,12 +1,13 @@
 import React from "react";
 import { css } from "@emotion/react";
 import { Button } from "@mui/material";
-import { Link } from "./Links";
-import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
+import { Route } from "./Routes";
 import { useNavigate } from "react-router-dom";
+import { ReturnButton } from "./ReturnButton";
+import { NavButton } from "./NavButton";
 
 interface Props {
-  links: Link[];
+  links: Route[];
 }
 
 export const ExpandedMenu = (props: Props) => {
@@ -15,24 +16,15 @@ export const ExpandedMenu = (props: Props) => {
 
   return (
     <div css={{ display: "flex", justifyContent: "space-between" }}>
-      <Button
-        variant="text"
-        onClick={() => navigate("/")}
-        color="secondary"
-        startIcon={<NavigateBeforeIcon color="secondary" />}
-      >
-        Return
-      </Button>
+      <ReturnButton />
       <div>
-        {links.map((link: Link) => (
-          <Button
-            key={link.text}
-            color="secondary"
-            variant="text"
-            onClick={() => navigate(link.route)}
-          >
-            {link.text}
-          </Button>
+        {links.map((route: Route) => (
+          <NavButton
+            key={route.text}
+            handleClick={() => navigate(route.path)}
+            path={route.path}
+            text={route.text}
+          />
         ))}
       </div>
     </div>

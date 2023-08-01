@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "./components/Header";
+import { Home } from "./pages/home/Home";
 import { css } from "@emotion/react";
 import { Box, Container, useMediaQuery } from "@mui/material";
 import { Outlet, useLocation } from "react-router-dom";
@@ -21,7 +21,7 @@ export const App = () => {
     <Box css={appBox} bgcolor={"primary.main"}>
       <Container maxWidth="lg" css={appContainer}>
         <Nav />
-        <Header />
+        <Home />
         <Outlet />
       </Container>
     </Box>
