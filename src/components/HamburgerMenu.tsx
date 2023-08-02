@@ -37,7 +37,7 @@ export const HamburgerMenu = (props: Props) => {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        <MenuIcon />
+        <MenuIcon color="primary" />
       </IconButton>
       <Menu
         id="nav-menu"
