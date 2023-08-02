@@ -1,4 +1,4 @@
-import { Divider, Typography } from "@mui/material";
+import { Divider, Link, Typography } from "@mui/material";
 import React from "react";
 import { BasePage } from "./BasePage";
 import { css } from "@emotion/react";
@@ -6,6 +6,7 @@ import { css } from "@emotion/react";
 const iframeStyles = css({
   border: 0,
   width: "100%",
+  maxWidth: "700px",
   height: "120px",
   marginTop: ".5rem",
   marginBottom: "2rem",
@@ -42,5 +43,20 @@ export const Music = () => (
         Shapeshifter by The Womb Bats
       </a>
     </iframe>
+    <Divider color="#B48291" />
+    <Typography color="primary.light" style={{ marginTop: "2rem" }}>
+      This is a string quartet I composed in college. You can find other
+      recordings at the same SoundCloud page.
+    </Typography>
+    <Typography color="#B48291">
+      Performed by the{" "}
+      <Link href="https://www.semiosisquartet.com/">Semiosis Quartet</Link>
+    </Typography>
+    <iframe
+      css={iframeStyles}
+      height="166"
+      allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/311824266&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+    />
   </BasePage>
 );

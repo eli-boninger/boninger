@@ -74,6 +74,18 @@ export const Resume = (props: Props) => {
               improvement company using Angular 4 and .NET Framework.
             </li>
           </ul>
+          <br />
+          <strong>Tufts Computer Science Department</strong>, Medford, MA
+          <br />
+          <JobTitles
+            titles={["Teaching Assistant, September 2015 - May 2017"]}
+          />
+          <ul css={unorderedList}>
+            <li>
+              Taught recitations, wrote assignments, and held office hours for
+              Tufts’ Programming Languages course and Tufts’ Networks course.
+            </li>
+          </ul>
         </>
       </ResumeSection>
       <ResumeSection title="Education">
