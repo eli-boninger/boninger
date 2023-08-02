@@ -13,7 +13,7 @@ export const NavButton = (props: Props) => {
   const { path, text, handleClick } = props;
   const { pathname } = useLocation();
   return (
-    <Button key={text} color="secondary" variant="text" onClick={handleClick}>
+    <Button key={text} variant="text" onClick={handleClick}>
       {text}
     </Button>
   );

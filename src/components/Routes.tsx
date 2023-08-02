@@ -1,4 +1,4 @@
-import { Bio } from "../pages/Bio";
+import { Bio } from "../pages/bio/Bio";
 import { Music } from "../pages/Music";
 import { WorkSamples } from "../pages/WorkSamples";
 

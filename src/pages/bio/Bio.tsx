@@ -1,24 +1,29 @@
-import {
-  Fade,
-  ImageList,
-  ImageListItem,
-  ImageListItemBar,
-  Typography,
-} from "@mui/material";
+import { Link, Typography } from "@mui/material";
 import React from "react";
-import { BasePage } from "./BasePage";
+import { BasePage } from "../BasePage";
+import { Resume } from "./Resume";
 
 export const Bio = () => (
   <BasePage title="About me">
     <div style={{ maxWidth: "50rem" }}>
-      <Typography component="div" color="secondary.light">
+      <Typography color="primary.light">
+        <i>
+          For a more traditional resume, click{" "}
+          <Link color="info.main" href="#resume">
+            here
+          </Link>
+          .
+        </i>
+      </Typography>
+      <br />
+      <Typography component="div" color="primary.light">
         After double-majoring in Computer Science and Music at the Tufts
         University School of Engineering (class of 2017), I joined the tech
         industry as a full stack software engineer.
       </Typography>
       <br />
-      <Typography component="div" color="secondary.light">
-        My first role was with Slalom Build as a developer part of several
+      <Typography component="div" color="primary.light">
+        My first role was with Slalom Build, working as a developer on several
         different "scrum teams for hire". During my two years with Slalom Build
         I worked on five different teams, each serving a different and unique
         client. Among these projects (company names omitted to avoid privacy
@@ -38,13 +43,35 @@ export const Bio = () => (
         Engineer and began to hone my skills as a full stack web developer.
       </Typography>
       <br />
-      <Typography color="secondary">
+      <Typography component="div" color="primary.light">
         Enticed by their mission to help patients receive better healthcare
         around the clock, I joined Wellframe in 2019 to become part of a much
         smaller team of engineers focused on a specific product. My main
         responsibility was the Wellframe Dashboard, a web page where care
-        managers can manage and communicate with their patients.
+        managers manage and communicate with their patients.
+        <br />I was responsible for the development and deployment of several
+        new features while at Wellframe, including:
+        <ul>
+          <li>
+            A new platform for our clinical to upload articles and attach them
+            to content bundles viewable by patients and care teams
+          </li>
+          <li>
+            A way for care managers to create custom message templates with
+            autofilled shortcuts to send to patients
+          </li>
+          <li>
+            A brand new component library for use throughout all the Wellframe
+            frontend applications
+          </li>
+        </ul>
+        Wellframe's stack consisted of a React & Typescript app for the care
+        manager dashboard, served by both a Rails API as well as several Spring
+        Boot microservices. These service were deployed via GCP, using GitLab
+        for CI/CD.
       </Typography>
+      <br />
+      <Resume />
     </div>
   </BasePage>
 );

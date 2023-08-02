@@ -18,7 +18,7 @@ const appContainer = css({
 
 export const App = () => {
   return (
-    <Box css={appBox} bgcolor={"primary.main"}>
+    <Box css={appBox} bgcolor={"secondary.main"}>
       <Container maxWidth="lg" css={appContainer}>
         <Nav />
         <Home />

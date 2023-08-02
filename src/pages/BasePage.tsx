@@ -23,7 +23,7 @@ export const BasePage = (props: Props) => {
       <div>
         <Typography
           variant="h4"
-          color="secondary.light"
+          color="info.main"
           style={{ marginBottom: "1rem" }}
         >
           {title}

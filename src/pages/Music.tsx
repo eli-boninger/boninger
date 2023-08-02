@@ -13,7 +13,7 @@ const iframeStyles = css({
 
 export const Music = () => (
   <BasePage title="Music">
-    <Typography color="secondary.light">
+    <Typography color="primary.light">
       Wae Mel | <i>solo project</i>
     </Typography>
     <Typography color="#B48291">
@@ -29,7 +29,7 @@ export const Music = () => (
       </a>
     </iframe>
     <Divider color="#B48291" />
-    <Typography color="secondary.light" style={{ marginTop: "2rem" }}>
+    <Typography color="primary.light" style={{ marginTop: "2rem" }}>
       The Womb Bats | <i>my college rock band</i>
     </Typography>
     <Typography color="#B48291">That's me on the keys.</Typography>

@@ -10,11 +10,7 @@ export const HomeButtonGroup = () => {
   const navigate = useNavigate();
 
   return (
-    <ButtonGroup
-      variant="text"
-      color="secondary"
-      aria-label="Navigation options button group"
-    >
+    <ButtonGroup variant="text" aria-label="Navigation options button group">
       {Routes.filter((link) => link.path !== "/").map((link: Route) => (
         <Button
           size={isSmallScreen ? "large" : "medium"}

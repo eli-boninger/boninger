@@ -9,9 +9,9 @@ export const ReturnButton = () => {
   return (
     <Button
       variant="text"
+      color="primary"
       onClick={() => navigate("/")}
-      color="secondary"
-      startIcon={<NavigateBeforeIcon color="secondary" />}
+      startIcon={<NavigateBeforeIcon />}
     >
       Home
     </Button>

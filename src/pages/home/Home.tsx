@@ -23,7 +23,7 @@ export const Home = () => {
           gap: "1rem",
         }}
       >
-        <Typography css={titleStyle} color="secondary">
+        <Typography css={titleStyle} color="primary">
           Eli Boninger is a web developer and musician living in Boston.
         </Typography>
         <HomeButtonGroup />

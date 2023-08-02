@@ -5,10 +5,10 @@ export const theme = createTheme({
     fontFamily: ["Open Sans", "sans-serif"].join(","),
   },
   palette: {
-    primary: {
+    secondary: {
       main: "#393E41",
     },
-    secondary: {
+    primary: {
       light: "#DDF8E8",
       main: "#CDD5D1",
     },
