@@ -49,6 +49,7 @@ export const Bio = () => (
         smaller team of engineers focused on a specific product. My main
         responsibility was the Wellframe Dashboard, a web page where care
         managers manage and communicate with their patients.
+        <br />
         <br />I was responsible for the development and deployment of several
         new features while at Wellframe, including:
         <ul>
