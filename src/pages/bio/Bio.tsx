@@ -1,11 +1,17 @@
 import { Link, Typography } from "@mui/material";
 import React from "react";
 import { BasePage } from "../BasePage";
+import { css } from "@emotion/react";
 import { Resume } from "./Resume";
+import imgUrl from "./pro_photo_2.jpg";
+
+const textStyle = css({
+  maxWidth: "50rem",
+});
 
 export const Bio = () => (
   <BasePage title="About me">
-    <div style={{ maxWidth: "50rem" }}>
+    <div css={textStyle}>
       <Typography color="primary.light">
         <i>
           For a more traditional resume, click{" "}
@@ -15,6 +21,11 @@ export const Bio = () => (
           .
         </i>
       </Typography>
+      <img
+        src={imgUrl}
+        style={{ maxWidth: "20rem", margin: "2rem 0" }}
+        alt="professional photo of Eli Boninger"
+      />
       <br />
       <Typography component="div" color="primary.light">
         After double-majoring in Computer Science and Music at the Tufts
