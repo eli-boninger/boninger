@@ -1,7 +1,5 @@
 import React from "react";
-import { css } from "@emotion/react";
 import { Button } from "@mui/material";
-import { useLocation } from "react-router-dom";
 
 interface Props {
   path: string;
@@ -10,10 +8,9 @@ interface Props {
 }
 
 export const NavButton = (props: Props) => {
-  const { path, text, handleClick } = props;
-  const { pathname } = useLocation();
+  const { text, handleClick } = props;
   return (
-    <Button key={text} variant="text" onClick={handleClick}>
+    <Button role="link" key={text} variant="text" onClick={handleClick}>
       {text}
     </Button>
   );

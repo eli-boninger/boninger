@@ -23,13 +23,15 @@ export const Nav = () => {
 
   return (
     <Fade in={isIn} timeout={1000}>
-      <div>
-        {isSmallScreen ? (
-          <HamburgerMenu links={Routes} />
-        ) : (
-          <ExpandedMenu links={Routes} />
-        )}
-      </div>
+      <nav>
+        <div>
+          {isSmallScreen ? (
+            <HamburgerMenu links={Routes} />
+          ) : (
+            <ExpandedMenu links={Routes} />
+          )}
+        </div>
+      </nav>
     </Fade>
   );
 };

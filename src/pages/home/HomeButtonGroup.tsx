@@ -15,6 +15,7 @@ export const HomeButtonGroup = () => {
         <Button
           size={isSmallScreen ? "large" : "medium"}
           key={link.text}
+          role="link"
           onClick={() => navigate(link.path)}
         >
           {link.text}
