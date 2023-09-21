@@ -16,8 +16,15 @@ export const WorkSamples = (props: Props) => {
         <br />
         <br />
         Unfortunately, all of my professional work thus far has been on private
-        platforms. I'm working on building out a public portfolio, but in the
-        meantime you can read more about my industry experience{" "}
+        platforms. Code for this website and other small projects lives at{" "}
+        <Link
+          css={{ color: theme.palette.info.main }}
+          to="https://github.com/eli-boninger"
+        >
+          {" "}
+          my GitHub page
+        </Link>
+        . You can read more about my industry experience{" "}
         <Link css={{ color: theme.palette.info.main }} to="/bio">
           here
         </Link>
