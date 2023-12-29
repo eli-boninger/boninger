@@ -34,22 +34,25 @@ export const Resume = (props: Props) => {
           />
           <ul css={unorderedList}>
             <li>
-              Tech lead, scrum master, and full stack web developer for a team
-              focused on the experience of patients’ care teams
+              Worked as tech lead, scrum master, and full stack web developer
+              for a team focused on the experience of medical patients’ care
+              teams
             </li>
             <li>
-              Management of cross-team front end engineering initiatives — among
-              them:
-              <ul css={unorderedList}>
-                <li>
-                  Oversaw transition from class-based to hook-based React
-                  components with a new styling solution
-                </li>
-                <li>
-                  Creation and continued support of a shared front end component
-                  library
-                </li>
-              </ul>
+              Spearheaded and documented organizational transition from
+              class-based to functional React components with a new styling
+              solution
+            </li>
+            <li>
+              Initiated and oversaw a weekly front end engineering sync meeting
+              to triage tech debt and discuss important front end development
+              topics across teams, such as unit testing, major package upgrades,
+              and coding standards
+            </li>
+            <li>
+              Headed a team of seven in a migration from one email provider to
+              another, while also adding functionality for customization of
+              email content based on insurance provider
             </li>
           </ul>
           <br />
@@ -63,15 +66,16 @@ export const Resume = (props: Props) => {
           />
           <ul css={unorderedList}>
             <li>
-              Worked as a full stack developer on agile development teams to
-              deliver high quality software to a broad spectrum of clients (five
-              clients in two years).
+              Collaborated with clients on various projects to develop new
+              software features according to clients’ specifications. Projects
+              spanned a wide range of topics, from creating a proof-of-concept
+              for a voice-activated faucet to modernizing a set of tools for the
+              calibration and development of paints and paint colors
             </li>
             <li>
-              Projects included a full scale rebuild of a customer portal
-              website to use modern web technology (React and Node), as well as
-              the modernization of a set of internal tools for a home
-              improvement company using Angular 4 and .NET Framework.
+              Quickly understood client codebases to start contributing to their
+              velocity right away, picking up new frameworks and programming
+              languages as needed
             </li>
           </ul>
           <br />

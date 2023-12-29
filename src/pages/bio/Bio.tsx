@@ -37,9 +37,9 @@ export const Bio = () => (
         <Typography component="div" color="primary.light">
           My first role was with Slalom Build, working as a developer on several
           different "scrum teams for hire". During my two years with Slalom
-          Build I worked on five different teams, each serving a different and
-          unique client. Among these projects (company names omitted to avoid
-          privacy issues) were:
+          Build I worked with five different teams, each serving a different
+          client. Among these projects (company names omitted to avoid privacy
+          issues) were:
           <ul>
             <li>
               Working on a proof of concept for an Alexa-controlled faucet
@@ -69,8 +69,8 @@ export const Bio = () => (
           new features while at Wellframe, including:
           <ul>
             <li>
-              A new platform for our clinical to upload articles and attach them
-              to content bundles viewable by patients and care teams
+              A new platform for our clinical team to upload articles and attach
+              them to content bundles viewable by patients and care teams
             </li>
             <li>
               A way for care managers to create custom message templates with

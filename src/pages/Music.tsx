@@ -15,6 +15,17 @@ const iframeStyles = css({
 export const Music = () => (
   <BasePage title="Music">
     <Typography color="primary.light">
+      Infants | <i>boston indie rock quartet</i>
+    </Typography>
+    <Typography color="#B48291">That's me on the drums.</Typography>
+    <iframe
+      css={iframeStyles}
+      src="https://open.spotify.com/embed/artist/64xK0wJW0iMyfFpeeQ9MpC?utm_source=generator"
+      allowFullScreen
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    />
+    <Divider color="#B48291" />
+    <Typography color="primary.light" style={{ marginTop: "2rem" }}>
       Wae Mel | <i>solo project</i>
     </Typography>
     <Typography color="#B48291">
