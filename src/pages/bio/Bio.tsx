@@ -1,21 +1,24 @@
 import { Link, Typography } from "@mui/material";
-import React from "react";
 import { BasePage } from "../BasePage";
 import { css } from "@emotion/react";
-import { Resume } from "./Resume";
-import imgUrl from "./pro_photo_2.jpg";
+import imgUrl from "../../assets/pro_photo_2.jpg";
+import styled from "@emotion/styled";
 
 const textStyle = css({
   maxWidth: "50rem",
 });
+
+const StyledTypography = styled(Typography)`
+  margin-bottom: 1rem;
+`
 
 export const Bio = () => (
   <BasePage title="About me">
     <div css={textStyle}>
       <Typography color="primary.light">
         <i>
-          For a more traditional resume, click{" "}
-          <Link color="info.main" href="#resume">
+          To view a more traditional resume, click{" "}
+          <Link color="info.main" target="_blank" href="https://boninger.s3.us-east-1.amazonaws.com/Resume+Eli+Boninger.pdf">
             here
           </Link>
           .
@@ -28,13 +31,12 @@ export const Bio = () => (
       />
       <br />
       <article>
-        <Typography component="div" color="primary.light">
+        <StyledTypography color="primary.light">
           After double-majoring in Computer Science and Music at the Tufts
           University School of Engineering (class of 2017), I joined the tech
           industry as a full stack software engineer.
-        </Typography>
-        <br />
-        <Typography component="div" color="primary.light">
+        </StyledTypography>
+        <StyledTypography color="primary.light">
           My first role was with Slalom Build, working as a developer on several
           different "scrum teams for hire". During my two years with Slalom
           Build I worked with five different teams, each serving a different
@@ -56,16 +58,15 @@ export const Bio = () => (
           Server, and many others. Over the course of my two years, I was
           promoted to Senior Engineer and began to hone my skills as a full
           stack web developer.
-        </Typography>
-        <br />
-        <Typography component="div" color="primary.light">
+        </StyledTypography>
+        <StyledTypography color="primary.light">
           Enticed by their mission to help patients receive better healthcare
           around the clock, I joined Wellframe in 2019 to become part of a much
           smaller team of engineers focused on a specific product. My main
           responsibility was the Wellframe Dashboard, a web page where care
           managers manage and communicate with their patients.
-          <br />
-          <br />I was responsible for the development and deployment of several
+        </StyledTypography>
+        <StyledTypography color="primary.light">I was responsible for the development and deployment of several
           new features while at Wellframe, including:
           <ul>
             <li>
@@ -85,11 +86,11 @@ export const Bio = () => (
           manager dashboard, served by both a Rails API as well as several
           Spring Boot microservices. These service were deployed via GCP, using
           GitLab for CI/CD.
-        </Typography>
+        </StyledTypography>
+        <StyledTypography color="primary.light">
+          I now work as a Senior Educator with Brainstation, a company dedicated to helping folks from all backgrounds learn new skills. I teach the full-time software engineering bootcamp, working with students from their first steps in HTML/CSS all the way to building full stack capstone projects using React, Node, and MySQL.
+        </StyledTypography>
       </article>
-
-      <br />
-      <Resume />
     </div>
   </BasePage>
 );
