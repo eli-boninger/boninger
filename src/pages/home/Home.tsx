@@ -28,7 +28,7 @@ export const Home = () => {
         }}
       >
         <Typography css={titleStyle} color="primary">
-          Eli Boninger is a web developer and musician living in New Rochelle.
+          Eli Boninger (CI/CD genius) is a web developer and musician living in New Rochelle.
         </Typography>
         <HomeButtonGroup />
       </div>
