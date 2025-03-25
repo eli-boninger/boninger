@@ -19,21 +19,20 @@ export const BasePage = (props: Props) => {
   return (
     <Fade
       in={pathname !== "/"}
-      timeout={1000}
-      style={{ transitionDelay: "1000ms" }}
+      timeout={750}
       unmountOnExit
       onExit={() => console.log("exiting")}
     >
-      <div>
+      <section>
         <Typography
-          variant="h4"
+          variant="h1"
           color="info.main"
-          style={{ marginBottom: "1rem" }}
+          style={{ margin: "1rem 0" }}
         >
           {title}
         </Typography>
         {children}
-      </div>
+      </section>
     </Fade>
   );
 };
