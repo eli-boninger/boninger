@@ -1,4 +1,4 @@
-import { Link, Typography } from "@mui/material";
+import { Link, Typography, TypographyProps } from "@mui/material";
 import { BasePage } from "../BasePage";
 import { css } from "@emotion/react";
 import imgUrl from "../../assets/pro_photo_3.jpg";
@@ -28,7 +28,7 @@ const imageStyles = css({
   borderRadius: '0.25rem'
 })
 
-const StyledTypography = styled(Typography)`
+const StyledTypography = styled(Typography) <TypographyProps>`
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
 `
@@ -77,7 +77,7 @@ export const Bio = () => {
         <article>
           {events.map((e, index) => <Accordion key={e.name} expanded={e.name === expanded} onChange={handleChange(e.name)}>
             <MuiAccordionSummary expandIcon={<ArrowDropDownIcon color="primary" />}><Typography component="span">{e.name}, {e.startYear} - {e.endYear}</Typography></MuiAccordionSummary>
-            <StyledTypography>
+            <StyledTypography component="div">
               {e.description()}
             </StyledTypography>
           </Accordion>)}
