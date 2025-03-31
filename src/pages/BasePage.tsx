@@ -25,8 +25,10 @@ export const BasePage = (props: Props) => {
       <section>
         <Typography
           variant="h1"
-          color="info.main"
           style={{ margin: "1rem 0" }}
+          sx={{
+            color: "info.main"
+          }}
         >
           {title}
         </Typography>

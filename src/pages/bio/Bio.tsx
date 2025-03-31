@@ -24,7 +24,7 @@ const mainStyle = css({
 
 const imageStyles = css({
   maxWidth: "20rem",
-  marginTop: '1rem',
+  margin: '1rem 0',
   borderRadius: '0.25rem'
 })
 
@@ -57,7 +57,9 @@ export const Bio = () => {
 
   return (
     <BasePage title="About me">
-      <Typography color="primary.light">
+      <Typography sx={{
+        color: "primary.light"
+      }}>
         <i>
           To view a more traditional resume, click{" "}
           <Link color="info.main" target="_blank" href="https://boninger.s3.us-east-1.amazonaws.com/Resume+Eli+Boninger.pdf">
@@ -72,10 +74,9 @@ export const Bio = () => {
           css={imageStyles}
           alt="professional photo of Eli Boninger"
         />
-        <br />
         <article>
           {events.map((e, index) => <Accordion key={e.name} expanded={e.name === expanded} onChange={handleChange(e.name)}>
-            <MuiAccordionSummary expandIcon={<ArrowDropDownIcon color="primary" />}><Typography>{e.name}, {e.startYear} - {e.endYear}</Typography></MuiAccordionSummary>
+            <MuiAccordionSummary expandIcon={<ArrowDropDownIcon color="primary" />}><Typography component="span">{e.name}, {e.startYear} - {e.endYear}</Typography></MuiAccordionSummary>
             <StyledTypography>
               {e.description()}
             </StyledTypography>
@@ -83,5 +84,5 @@ export const Bio = () => {
         </article>
       </main>
     </BasePage>
-  )
+  );
 }

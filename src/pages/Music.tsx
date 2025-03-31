@@ -14,10 +14,14 @@ const iframeStyles = css({
 
 export const Music = () => (
   <BasePage title="Music">
-    <Typography color="primary.light">
+    <Typography sx={{
+      color: "primary.light"
+    }}>
       Infants | <i>boston indie rock quartet</i>
     </Typography>
-    <Typography color="#B48291">That's me on the drums.</Typography>
+    <Typography sx={{
+      color: "#B48291"
+    }}>That's me on the drums.</Typography>
     <iframe
       css={iframeStyles}
       src="https://open.spotify.com/embed/artist/64xK0wJW0iMyfFpeeQ9MpC?utm_source=generator"
@@ -25,10 +29,14 @@ export const Music = () => (
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
     />
     <Divider color="#B48291" />
-    <Typography color="primary.light" style={{ marginTop: "2rem" }}>
+    <Typography style={{ marginTop: "2rem" }} sx={{
+      color: "primary.light"
+    }}>
       Wae Mel | <i>solo project</i>
     </Typography>
-    <Typography color="#B48291">
+    <Typography sx={{
+      color: "#B48291"
+    }}>
       All music written, played, recorded, and mixed by me.
     </Typography>
     <iframe
@@ -41,10 +49,14 @@ export const Music = () => (
       </a>
     </iframe>
     <Divider color="#B48291" />
-    <Typography color="primary.light" style={{ marginTop: "2rem" }}>
+    <Typography style={{ marginTop: "2rem" }} sx={{
+      color: "primary.light"
+    }}>
       The Womb Bats | <i>my college rock band</i>
     </Typography>
-    <Typography color="#B48291">That's me on the keys.</Typography>
+    <Typography sx={{
+      color: "#B48291"
+    }}>That's me on the keys.</Typography>
     <iframe
       css={iframeStyles}
       src="https://bandcamp.com/EmbeddedPlayer/track=2118083282/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
@@ -55,11 +67,15 @@ export const Music = () => (
       </a>
     </iframe>
     <Divider color="#B48291" />
-    <Typography color="primary.light" style={{ marginTop: "2rem" }}>
+    <Typography style={{ marginTop: "2rem" }} sx={{
+      color: "primary.light"
+    }}>
       This is a string quartet I composed in college. You can find other
       recordings at the same SoundCloud page.
     </Typography>
-    <Typography color="#B48291">
+    <Typography sx={{
+      color: "#B48291"
+    }}>
       Performed by the{" "}
       <Link href="https://www.semiosisquartet.com/">Semiosis Quartet</Link>
     </Typography>

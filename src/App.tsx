@@ -15,7 +15,9 @@ const appContainer = css({
 export const App = () => {
   const match = useMatch('/')
   return (
-    <Box css={appBox} bgcolor={"secondary.main"}>
+    <Box css={appBox} sx={{
+      bgcolor: "secondary.main"
+    }}>
       <Container maxWidth="lg" css={appContainer}>
         {!match && <Nav />}
         <Outlet />
