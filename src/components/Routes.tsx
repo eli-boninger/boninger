@@ -1,4 +1,5 @@
 import { Bio } from "../pages/bio/Bio";
+import { Home } from "../pages/home/Home";
 import { Music } from "../pages/Music";
 import { WorkSamples } from "../pages/WorkSamples";
 
@@ -9,6 +10,11 @@ export interface Route {
 }
 
 export const Routes: Route[] = [
+  {
+    text: "Home",
+    path: '/',
+    element: <Home />
+  },
   {
     text: "Bio",
     path: "/bio",

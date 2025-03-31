@@ -3,11 +3,12 @@ import { BasePage } from "../BasePage";
 import { css } from "@emotion/react";
 import imgUrl from "../../assets/pro_photo_3.jpg";
 import styled from "@emotion/styled";
-import MuiAccordion from '@mui/material/Accordion';
+import MuiAccordion, { accordionClasses } from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary'
 import { events } from "./BioEvents";
 import { theme } from "../../theme";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { SyntheticEvent, useState } from "react";
 
 
 
@@ -32,9 +33,21 @@ const StyledTypography = styled(Typography)`
   padding: 0.5rem 1rem;
 `
 
-export const Bio = () => (
-  <BasePage title="About me">
-    <div>
+const Accordion = styled(MuiAccordion)({
+  [`&.${accordionClasses.root}.${accordionClasses.expanded}`]: {
+    margin: 0
+  }
+})
+
+export const Bio = () => {
+  const [expanded, setExpanded] = useState<string | false>(events[0].name);
+
+  const handleChange = (panel: string) => (_e: SyntheticEvent, newExpanded: boolean) => {
+    setExpanded(newExpanded ? panel : false)
+  }
+
+  return (
+    <BasePage title="About me">
       <Typography color="primary.light">
         <i>
           To view a more traditional resume, click{" "}
@@ -52,15 +65,14 @@ export const Bio = () => (
         />
         <br />
         <article>
-          {events.map((e, index) => <MuiAccordion key={e.name} defaultExpanded={index === 0}>
+          {events.map((e, index) => <Accordion key={e.name} expanded={e.name === expanded} onChange={handleChange(e.name)}>
             <MuiAccordionSummary expandIcon={<ArrowDropDownIcon />}><Typography>{e.name}, {e.startYear} - {e.endYear}</Typography></MuiAccordionSummary>
             <StyledTypography>
               {e.description()}
             </StyledTypography>
-          </MuiAccordion>)}
+          </Accordion>)}
         </article>
       </main>
-
-    </div>
-  </BasePage>
-);
+    </BasePage>
+  )
+}

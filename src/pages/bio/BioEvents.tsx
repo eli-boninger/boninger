@@ -12,14 +12,14 @@ export const events = [
         startYear: "2019",
         endYear: "2023",
         description: () => <>
-            <p>
+            <>
                 Enticed by their mission to help patients receive better healthcare
                 around the clock, I joined Wellframe in 2019 to become part of a much
                 smaller team of engineers focused on a specific product. My main
                 responsibility was the Wellframe Dashboard, a web page where care
                 managers manage and communicate with their patients.
-            </p>
-            <p>I was responsible for the development and deployment of several
+            </>
+            <>I was responsible for the development and deployment of several
                 new features while at Wellframe, including:
                 <ul>
                     <li>
@@ -39,7 +39,7 @@ export const events = [
                 manager dashboard, served by both a Rails API as well as several
                 Spring Boot microservices. These service were deployed via GCP, using
                 GitLab for CI/CD.
-            </p>
+            </>
         </>
     },
     {

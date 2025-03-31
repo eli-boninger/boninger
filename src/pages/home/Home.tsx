@@ -1,7 +1,6 @@
 import { Fade, Typography } from "@mui/material";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { css } from "@emotion/react";
-import { useLocation, useNavigate } from "react-router-dom";
 import { HomeButtonGroup } from "./HomeButtonGroup";
 
 const titleStyle = css({
@@ -10,15 +9,12 @@ const titleStyle = css({
 });
 
 export const Home = () => {
-  const { pathname } = useLocation();
-  const isRootPath = pathname === "/";
-
   useEffect(() => {
     document.title = "Eli Boninger | Site Home";
   }, []);
 
   return (
-    <Fade timeout={1000} unmountOnExit in={isRootPath}>
+    <Fade timeout={{ enter: 750, exit: 0 }} in>
       <div
         css={{
           display: "flex",

@@ -1,7 +1,6 @@
-import { Button, Fade, Typography } from "@mui/material";
+import { Fade, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { css } from "@emotion/react";
 
 interface Props {
   title: string;

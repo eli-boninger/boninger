@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { css } from "@emotion/react";
-import { Button, Fade, useMediaQuery } from "@mui/material";
+import { Fade, useMediaQuery } from "@mui/material";
 import { theme } from "../theme";
 import { HamburgerMenu } from "./HamburgerMenu";
 import { Routes } from "./Routes";
@@ -9,26 +7,18 @@ import { ExpandedMenu } from "./ExpandedMenu";
 
 export const Nav = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const navigate = useNavigate();
-  const { pathname } = useLocation();
-  const [isIn, setIsIn] = useState(pathname !== "/");
 
-  useEffect(() => {
-    if (!isIn && pathname !== "/") {
-      setTimeout(() => setIsIn(true), 1000);
-    } else {
-      setIsIn(pathname !== "/");
-    }
-  }, [pathname]);
 
+
+  const nonHomeRoutes = Routes.filter((r) => r.path !== '/');
   return (
-    <Fade in={isIn} timeout={1000}>
-      <nav>
+    <Fade timeout={500} in>
+      <nav css={{ position: 'sticky', top: 0 }}>
         <div>
           {isSmallScreen ? (
-            <HamburgerMenu links={Routes} />
+            <HamburgerMenu links={nonHomeRoutes} />
           ) : (
-            <ExpandedMenu links={Routes} />
+            <ExpandedMenu links={nonHomeRoutes} />
           )}
         </div>
       </nav>
