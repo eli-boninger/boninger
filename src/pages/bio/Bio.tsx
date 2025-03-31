@@ -24,7 +24,7 @@ const mainStyle = css({
 
 const imageStyles = css({
   maxWidth: "20rem",
-  margin: "0",
+  marginTop: '1rem',
   borderRadius: '0.25rem'
 })
 
@@ -34,8 +34,17 @@ const StyledTypography = styled(Typography)`
 `
 
 const Accordion = styled(MuiAccordion)({
+  backgroundColor: 'transparent',
+  color: theme.palette.primary.light,
+  boxShadow: 'none',
+  '&::before': {
+    backgroundColor: theme.palette.primary.light
+  },
   [`&.${accordionClasses.root}.${accordionClasses.expanded}`]: {
-    margin: 0
+    margin: 0,
+    '&::before': {
+      opacity: 1
+    }
   }
 })
 
@@ -66,7 +75,7 @@ export const Bio = () => {
         <br />
         <article>
           {events.map((e, index) => <Accordion key={e.name} expanded={e.name === expanded} onChange={handleChange(e.name)}>
-            <MuiAccordionSummary expandIcon={<ArrowDropDownIcon />}><Typography>{e.name}, {e.startYear} - {e.endYear}</Typography></MuiAccordionSummary>
+            <MuiAccordionSummary expandIcon={<ArrowDropDownIcon color="primary" />}><Typography>{e.name}, {e.startYear} - {e.endYear}</Typography></MuiAccordionSummary>
             <StyledTypography>
               {e.description()}
             </StyledTypography>
