@@ -24,7 +24,6 @@ export const Music = () => (
     <iframe
       css={iframeStyles}
       src="https://open.spotify.com/embed/artist/64xK0wJW0iMyfFpeeQ9MpC?utm_source=generator"
-      allowFullScreen
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy"
     />

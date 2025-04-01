@@ -6,7 +6,7 @@ import { WorkSamples } from "../pages/WorkSamples";
 export interface Route {
   text: string;
   path: string;
-  element: React.ReactElement;
+  element: React.ReactElement<any>;
 }
 
 export const Routes: Route[] = [
