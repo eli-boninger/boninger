@@ -19,7 +19,7 @@ export const Music = () => (
       Infants | <i>boston indie rock quartet</i>
     </Typography>
     <Typography sx={{
-      color: "#B48291"
+      color: "#E1CCD3"
     }}>That's me on the drums.</Typography>
     <iframe
       css={iframeStyles}
@@ -28,14 +28,14 @@ export const Music = () => (
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy"
     />
-    <Divider color="#B48291" />
+    <Divider color="#E1CCD3" />
     <Typography style={{ marginTop: "2rem" }} sx={{
       color: "primary.light"
     }}>
       Wae Mel | <i>solo project</i>
     </Typography>
     <Typography sx={{
-      color: "#B48291"
+      color: "#E1CCD3"
     }}>
       All music written, played, recorded, and mixed by me.
     </Typography>
@@ -49,14 +49,14 @@ export const Music = () => (
         Wae Mel&#39;s Pop Hits! by Wae Mel
       </a>
     </iframe>
-    <Divider color="#B48291" />
+    <Divider color="#E1CCD3" />
     <Typography style={{ marginTop: "2rem" }} sx={{
       color: "primary.light"
     }}>
       The Womb Bats | <i>my college rock band</i>
     </Typography>
     <Typography sx={{
-      color: "#B48291"
+      color: "#E1CCD3"
     }}>That's me on the keys.</Typography>
     <iframe
       css={iframeStyles}
@@ -68,7 +68,7 @@ export const Music = () => (
         Shapeshifter by The Womb Bats
       </a>
     </iframe>
-    <Divider color="#B48291" />
+    <Divider color="#E1CCD3" />
     <Typography style={{ marginTop: "2rem" }} sx={{
       color: "primary.light"
     }}>
@@ -76,7 +76,7 @@ export const Music = () => (
       recordings at the same SoundCloud page.
     </Typography>
     <Typography sx={{
-      color: "#B48291"
+      color: "#E1CCD3"
     }}>
       Performed by the{" "}
       <Link href="https://www.semiosisquartet.com/">Semiosis Quartet</Link>
