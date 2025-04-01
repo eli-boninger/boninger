@@ -75,7 +75,7 @@ export const Bio = () => {
           alt="professional photo of Eli Boninger"
         />
         <article>
-          {events.map((e, index) => <Accordion key={e.name} expanded={e.name === expanded} onChange={handleChange(e.name)}>
+          {events.map((e) => <Accordion key={e.name} expanded={e.name === expanded} onChange={handleChange(e.name)}>
             <MuiAccordionSummary expandIcon={<ArrowDropDownIcon color="primary" />}><Typography component="span">{e.name}, {e.startYear} - {e.endYear}</Typography></MuiAccordionSummary>
             <StyledTypography component="div">
               {e.description()}

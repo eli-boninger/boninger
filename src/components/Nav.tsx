@@ -2,7 +2,6 @@ import { Fade, useMediaQuery } from "@mui/material";
 import { theme } from "../theme";
 import { HamburgerMenu } from "./HamburgerMenu";
 import { Routes } from "./Routes";
-import { useLocation, useNavigate } from "react-router-dom";
 import { ExpandedMenu } from "./ExpandedMenu";
 
 export const Nav = () => {
@@ -13,7 +12,7 @@ export const Nav = () => {
   const nonHomeRoutes = Routes.filter((r) => r.path !== '/');
   return (
     <Fade timeout={500} in>
-      <nav css={{ position: 'sticky', top: 0 }}>
+      <nav css={{ position: 'sticky', top: 0, backgroundColor: theme.palette.secondary.main }}>
         <div>
           {isSmallScreen ? (
             <HamburgerMenu links={nonHomeRoutes} />

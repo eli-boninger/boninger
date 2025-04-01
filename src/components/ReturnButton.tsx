@@ -1,4 +1,3 @@
-import React from "react";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 
 import { Button } from "@mui/material";

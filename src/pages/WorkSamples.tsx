@@ -1,13 +1,9 @@
-import React from "react";
-import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 import { BasePage } from "./BasePage";
 import { Link } from "react-router-dom";
 import { theme } from "../theme";
 
-interface Props {}
-
-export const WorkSamples = (props: Props) => {
+export const WorkSamples = () => {
   return (
     <BasePage title="Work samples">
       <Typography component="div" sx={{

@@ -5,8 +5,6 @@ import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./theme";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Error } from "./pages/Error";
-import { Music } from "./pages/Music";
-import { Bio } from "./pages/bio/Bio";
 import { Routes } from "./components/Routes";
 
 const router = createBrowserRouter([

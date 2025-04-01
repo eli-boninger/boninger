@@ -1,5 +1,3 @@
-import React from "react";
-import { css } from "@emotion/react";
 import { Button, ButtonGroup, useMediaQuery } from "@mui/material";
 import { Route, Routes } from "../../components/Routes";
 import { theme } from "../../theme";

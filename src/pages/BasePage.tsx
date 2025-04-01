@@ -1,6 +1,6 @@
 import { Fade, Typography } from "@mui/material";
 import React, { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 interface Props {
   title: string;
@@ -13,7 +13,7 @@ export const BasePage = (props: Props) => {
 
   useEffect(() => {
     document.title = `Eli Boninger | ${title}`;
-  }, []);
+  }, [title]);
 
   return (
     <Fade
