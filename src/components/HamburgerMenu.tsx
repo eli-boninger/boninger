@@ -58,6 +58,7 @@ export const HamburgerMenu = (props: Props) => {
             key={link.text}
             onClick={() => handleItemClick(link.path)}
             selected={pathname === link.path}
+            sx={{ color: 'text.primary' }}
           >
             {link.text}
           </MenuItem>
