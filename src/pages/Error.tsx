@@ -1,10 +1,9 @@
 import { Box, Typography } from "@mui/material";
-import { useNavigate, useRouteError } from "react-router-dom";
+import { useRouteError } from "react-router-dom";
 import { NavButton } from "../components/NavButton";
 
 export const Error = () => {
   const error = useRouteError();
-  const navigate = useNavigate();
   console.error(error);
 
   return (
@@ -12,7 +11,7 @@ export const Error = () => {
       <Typography>
         An unexpected error has occurred.
       </Typography>
-      <NavButton sx={{ mt: 4 }} onClick={() => navigate('/')}>Go Home</NavButton >
+      <NavButton sx={{ mt: 4 }} to="/">Go Home</NavButton >
     </Box >
 
   );

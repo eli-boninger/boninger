@@ -1,11 +1,10 @@
 import { Button, ButtonGroup, useMediaQuery } from "@mui/material";
 import { Route, Routes } from "../../components/Routes";
 import { theme } from "../../theme";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const HomeButtonGroup = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const navigate = useNavigate();
 
   return (
     <ButtonGroup variant="text" aria-label="Navigation options button group">
@@ -13,8 +12,9 @@ export const HomeButtonGroup = () => {
         <Button
           size={isSmallScreen ? "large" : "medium"}
           key={link.text}
+          component={Link}
           role="link"
-          onClick={() => navigate(link.path)}
+          to={link.path}
         >
           {link.text}
         </Button>

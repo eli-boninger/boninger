@@ -1,4 +1,4 @@
-import { Divider, Link, Typography } from "@mui/material";
+import { Box, Divider, Link, Typography } from "@mui/material";
 import { BasePage } from "./BasePage";
 import { css } from "@emotion/react";
 
@@ -13,6 +13,7 @@ const iframeStyles = (short = false) => css({
 
 const musicContents = [
   {
+    id: 1,
     Title: () => <>Infants | <i>boston indie rock quartet</i></>,
     Subtitle: () => <>That's me on the drums.</>,
     Iframe: () => <iframe
@@ -23,6 +24,7 @@ const musicContents = [
     />
   },
   {
+    id: 2,
     Title: () => <>Wae Mel | <i>solo project</i></>,
     Subtitle: () => <>All music written, played, recorded, and mixed by me.</>,
     Iframe: () => <iframe
@@ -36,6 +38,7 @@ const musicContents = [
       </a>
     </iframe>
   }, {
+    id: 3,
     Title: () => <> The Womb Bats | <i>my college rock band</i></>,
     Subtitle: () => <>That's me on the keys.</>,
     Iframe: () => <iframe
@@ -50,6 +53,7 @@ const musicContents = [
     </iframe>
   },
   {
+    id: 4,
     Title: () => <>This is a string quartet I composed in college. You can find other
       recordings at the same SoundCloud page.</>,
     Subtitle: () => <>Performed by the{" "}
@@ -66,11 +70,12 @@ const musicContents = [
 
 export const Music = () => (
   <BasePage title="Music">
-    {musicContents.map((content, i) => <>
-      <Typography sx={{ pt: '1rem' }} ><content.Title /></Typography>
-      <Typography variant="body2" sx={{ color: "text.secondary", pb: '0.5rem' }}><content.Subtitle /></Typography>
-      <content.Iframe />
-      {i !== musicContents.length - 1 && <Divider sx={{ borderColor: "text.primary", opacity: 0.4 }} />}
-    </>)}
+    {musicContents.map((content, i) =>
+      <Box key={content.id}>
+        <Typography sx={{ pt: '1rem' }} ><content.Title /></Typography>
+        <Typography variant="body2" sx={{ color: "text.secondary", pb: '0.5rem' }}><content.Subtitle /></Typography>
+        <content.Iframe />
+        {i !== musicContents.length - 1 && <Divider sx={{ borderColor: "text.primary", opacity: 0.4 }} />}
+      </Box>)}
   </BasePage>
 );

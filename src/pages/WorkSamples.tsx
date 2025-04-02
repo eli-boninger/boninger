@@ -21,7 +21,7 @@ export const WorkSamples = () => {
           my GitHub page
         </Link>
         . You can read more about my industry experience{" "}
-        <Link css={{ color: theme.palette.info.light }} to="/bio">
+        <Link css={{ color: theme.palette.info.main }} to="/bio">
           here
         </Link>
         .

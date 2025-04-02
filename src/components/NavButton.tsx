@@ -1,8 +1,9 @@
 import { Button, ButtonProps } from "@mui/material";
+import { Link, LinkProps } from "react-router-dom";
 
-export const NavButton = (props: ButtonProps) => {
-  const { role, variant, ...otherProps } = props;
+export const NavButton = (props: LinkProps & ButtonProps) => {
+  const { role, variant, to, ...otherProps } = props;
   return (
-    <Button role="link" variant="text" {...otherProps} />
+    <Button component={Link} variant="text" {...otherProps} />
   );
 };
