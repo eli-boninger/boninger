@@ -1,4 +1,4 @@
-import { Fade, Typography } from "@mui/material";
+import { Box, Fade, Typography } from "@mui/material";
 import { useEffect } from "react";
 import { css } from "@emotion/react";
 import { HomeButtonGroup } from "./HomeButtonGroup";
@@ -27,22 +27,25 @@ export const Home = () => {
 
   return (
     <Fade timeout={{ enter: 750, exit: 0 }} in>
-      <div
-        css={{
+      <Box
+        sx={(theme) => ({
           display: "flex",
           flexDirection: "column",
-          marginTop: "6rem",
+          paddingTop: "6rem",
           gap: "1rem",
-        }}
+          textAlign: 'center',
+          [theme.breakpoints.up('sm')]: {
+            textAlign: 'left'
+          }
+        })}
       >
-        <Typography css={titleStyle} color="primary">
+        <Typography css={titleStyle}>
           Eli Boninger is a web developer and musician living in New Rochelle, New York.
         </Typography>
         <div css={buttonGroup}>
           <HomeButtonGroup />
         </div>
-
-      </div>
+      </Box>
     </Fade>
   );
 };

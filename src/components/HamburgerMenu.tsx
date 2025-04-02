@@ -1,10 +1,9 @@
-import React from "react";
-import { css } from "@emotion/react";
 import MenuIcon from "@mui/icons-material/Menu";
-import { IconButton, Menu, MenuItem } from "@mui/material";
+import { Box, IconButton, Menu, MenuItem } from "@mui/material";
 import { Route } from "./Routes";
 import { useLocation, useNavigate } from "react-router-dom";
 import { ReturnButton } from "./ReturnButton";
+import { useState } from "react";
 
 interface Props {
   links: Route[];
@@ -14,55 +13,56 @@ export const HamburgerMenu = (props: Props) => {
   const { links } = props;
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+
+  const handleAnchorClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const handleCLick = (route: string) => {
+
+  const handleItemClick = (route: string) => {
     setAnchorEl(null);
     navigate(route);
   };
 
   return (
-    <div css={{ display: "flex", justifyContent: "space-between" }}>
+    <Box sx={{ display: "flex", justifyContent: "space-between" }}>
       <ReturnButton />
       <IconButton
         id="nav-button"
         aria-controls={open ? "nav-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
-        onClick={handleClick}
+        onClick={handleAnchorClick}
       >
-        <MenuIcon color="primary" />
+        <MenuIcon sx={{ color: 'primary.main' }} />
       </IconButton>
       <Menu
         id="nav-menu"
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        MenuListProps={{
-          "aria-labelledby": "nav-button",
-        }}
-        css={css`
-          .MuiMenu-list {
-            min-width: 7rem;
+        slotProps={{ list: { "aria-labelledby": "nav-button" } }}
+        sx={{
+          ['& .MuiMenu-list']: {
+            minWidth: '7rem'
           }
-        `}
+        }}
       >
         {links.map((link) => (
           <MenuItem
             key={link.text}
-            onClick={() => handleCLick(link.path)}
+            onClick={() => handleItemClick(link.path)}
             selected={pathname === link.path}
           >
             {link.text}
           </MenuItem>
         ))}
       </Menu>
-    </div>
+    </Box >
   );
 };

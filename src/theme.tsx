@@ -1,23 +1,56 @@
-import { createTheme } from "@mui/material/styles";
+import { grey } from "@mui/material/colors";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
-export const theme = createTheme({
+let theme = createTheme({
+  colorSchemes: {
+    dark: {
+      palette: {
+        primary: {
+          main: '#D4DFF2',
+        },
+        background: {
+          default: '#414141'
+        },
+        info: {
+          main: '#A5E1FD',
+        }
+      }
+    },
+    light: {
+      palette: {
+        primary: {
+          main: '#32539A',
+        },
+        background: {
+          default: grey[50]
+        }
+      }
+    }
+  },
   typography: {
     fontFamily: "Open Sans,sans-serif",
     h1: {
-      fontSize: '3rem'
+      fontSize: '3.5rem'
+    }
+  }
+});
+
+theme = createTheme(theme, {
+  typography: {
+    color: theme.palette.text.primary,
+    body1: {
+      color: theme.palette.text.primary
     }
   },
+  components: {
+    MuiTypography: {
+      defaultProps: {
+        color: "text.primary"
+      }
+    }
+  }
+})
 
-  palette: {
-    secondary: {
-      main: "#393E41",
-    },
-    primary: {
-      light: "#DDF8E8",
-      main: "#CDD5D1",
-    },
-    info: {
-      main: "#EB9486",
-    },
-  },
-});
+
+theme = responsiveFontSizes(theme)
+export { theme };

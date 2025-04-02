@@ -1,14 +1,12 @@
-import { Typography } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 import { BasePage } from "./BasePage";
 import { Link } from "react-router-dom";
-import { theme } from "../theme";
 
 export const WorkSamples = () => {
+  const theme = useTheme()
   return (
     <BasePage title="Work samples">
-      <Typography component="div" sx={{
-        color: "primary.light"
-      }}>
+      <Typography component="div">
         This website was built from scratch using React, Typescript, and
         Material UI, and deployed with AWS.
         <br />
@@ -23,7 +21,7 @@ export const WorkSamples = () => {
           my GitHub page
         </Link>
         . You can read more about my industry experience{" "}
-        <Link css={{ color: theme.palette.info.main }} to="/bio">
+        <Link css={{ color: theme.palette.info.light }} to="/bio">
           here
         </Link>
         .

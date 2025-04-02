@@ -1,4 +1,4 @@
-import { Fade, Typography } from "@mui/material";
+import { Box, Fade, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -22,18 +22,15 @@ export const BasePage = (props: Props) => {
       unmountOnExit
       onExit={() => console.log("exiting")}
     >
-      <section>
+      <Box component="section" sx={{ m: 1 }}>
         <Typography
           variant="h1"
-          style={{ margin: "1rem 0" }}
-          sx={{
-            color: "info.main"
-          }}
+          sx={{ m: "1rem 0" }}
         >
           {title}
         </Typography>
         {children}
-      </section>
+      </Box>
     </Fade>
   );
 };

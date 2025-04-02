@@ -1,16 +1,8 @@
-import { Button } from "@mui/material";
+import { Button, ButtonProps } from "@mui/material";
 
-interface Props {
-  path: string;
-  text: string;
-  handleClick: () => void;
-}
-
-export const NavButton = (props: Props) => {
-  const { text, handleClick } = props;
+export const NavButton = (props: ButtonProps) => {
+  const { role, variant, ...otherProps } = props;
   return (
-    <Button role="link" key={text} variant="text" onClick={handleClick}>
-      {text}
-    </Button>
+    <Button role="link" variant="text" {...otherProps} />
   );
 };

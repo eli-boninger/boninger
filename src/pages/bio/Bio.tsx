@@ -15,11 +15,16 @@ import { SyntheticEvent, useState } from "react";
 const mainStyle = css({
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'flex-start',
+  alignItems: 'center',
   gap: theme.spacing(2),
+  marginTop: '1rem',
+  [theme.breakpoints.up('sm')]: {
+    alignItems: 'flex-start'
+  },
   [theme.breakpoints.up('lg')]: {
     flexDirection: 'row'
-  }
+  },
+
 })
 
 const imageStyles = css({
@@ -34,12 +39,7 @@ const StyledTypography = styled(Typography) <TypographyProps>`
 `
 
 const Accordion = styled(MuiAccordion)({
-  backgroundColor: 'transparent',
-  color: theme.palette.primary.light,
-  boxShadow: 'none',
-  '&::before': {
-    backgroundColor: theme.palette.primary.light
-  },
+
   [`&.${accordionClasses.root}.${accordionClasses.expanded}`]: {
     margin: 0,
     '&::before': {
@@ -57,9 +57,7 @@ export const Bio = () => {
 
   return (
     <BasePage title="About me">
-      <Typography sx={{
-        color: "primary.light"
-      }}>
+      <Typography>
         <i>
           To view a more traditional resume, click{" "}
           <Link color="info.main" target="_blank" href="https://boninger.s3.us-east-1.amazonaws.com/Resume+Eli+Boninger.pdf">
@@ -76,7 +74,7 @@ export const Bio = () => {
         />
         <article>
           {events.map((e) => <Accordion key={e.name} expanded={e.name === expanded} onChange={handleChange(e.name)}>
-            <MuiAccordionSummary expandIcon={<ArrowDropDownIcon color="primary" />}><Typography component="span">{e.name}, {e.startYear} - {e.endYear}</Typography></MuiAccordionSummary>
+            <MuiAccordionSummary expandIcon={<ArrowDropDownIcon />}><Typography component="span">{e.name}, {e.startYear} - {e.endYear}</Typography></MuiAccordionSummary>
             <StyledTypography component="div">
               {e.description()}
             </StyledTypography>
